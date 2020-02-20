@@ -3,16 +3,17 @@
 
 char* newstrcpy(char* dest, char* src){
 	char *inicioDest=dest;
-	while(*src){
+	while(*src != '\0'){
 		*dest=*src;
 		*dest++;
 		*src++;
 	}
-	return *inicioDest;
+	return inicioDest;
 }
 
 int main(){
-	char dest[20], src[20];
+	char dest[100], src[100];
+	//Yes, I know gets is not secure
 	gets(dest);
 	gets(src);
 	printf("%s\n", newstrcpy(dest, src));
