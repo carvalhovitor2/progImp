@@ -2,12 +2,18 @@
 
 
 char* concat(char *str1, char *str2){
+	int count=0;
 		while (*str1){
-			printf("%c", str1);
 			*str1++;
+			count++;
 		}
-		*str1 = *str2;
-		return *str1;
+		while(*str2){
+			*str1=*str2;
+			*str2++;
+			*str1++;
+			count++;
+		}
+		return str1-count;
 }
 
 int main(){
@@ -15,8 +21,6 @@ int main(){
 	char string1[50], string2[50];
 	gets(string1);
 	gets(string2);
-	char *a = string1, *b = string2;
-	concat(*a, *b);
-	puts(string1);	
+	printf("Concatenating both strings: %s\n", concat(string1, string2));
 	return 0;
 }
