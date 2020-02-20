@@ -1,23 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 
-void newstrcmp(char *string1, char* string2){
-	while(*string1 != '\0'){
-		printf("%c", *string1++);
+int newstrcmp(char* string1, char* string2){
+	while(*string1 == *string2){
+		*string1++;
+		*string2++;
 	}
-	printf("%s", string2);
-
+	if (*string1 > *string2) return 1;
+	if (*string1 < *string2) return -1;
+	return 0;
 }
-
 
 int main(){
 	char string1[20], string2[20];
-	char *p, *p1;;
-	fgets(string1, 20, stdin);
-	fgets(string2, 20, stdin);
-
-	p=string1;
-	p1=string2;
-	void newstrcmp(p, p1);
+	gets(string1);
+	gets(string2);
+	printf("minha: %d --- strcmp: %d\n", newstrcmp(string1, string2), strcmp(string1, string2));
 	return 0;
 }
