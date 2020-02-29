@@ -6,7 +6,6 @@
 
 int bitsUm (unsigned int n){
 	unsigned int count = 0;
-	printf("unsigned int n: %u\n", n);
 	while (n){
 	count += n & 1;
 	n >>= 1;
@@ -14,7 +13,9 @@ int bitsUm (unsigned int n){
 	return count;
 }
 int main(){
-	int a=7;
-	printf("bitsUm em %d: %d\n", a, bitsUm(a));
+	int num;
+	printf("Insira um numero:\n");
+	scanf("%d", &num);
+	printf("bitsUm em %d: %d\n", num, bitsUm(num));
 	return 0;
 }

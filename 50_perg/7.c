@@ -17,9 +17,10 @@ char* concat(char *str1, char *str2){
 }
 
 int main(){
-
 	char string1[50], string2[50];
+	printf("Insert first string:\n");
 	gets(string1);
+	printf("Insert second string:\n");
 	gets(string2);
 	printf("Concatenating both strings: %s\n", concat(string1, string2));
 	return 0;
