@@ -21,7 +21,7 @@ int main(){
 	char string[1000];
 	printf("Insira uma string:\n");
 	gets(string);
-	printf("O comprimento da maior substring de caracteres identicos eh: %d\n", remRep(string));
+	printf("O comprimento da string resultante eh: %d\n", remRep(string));
 	printf("A nova string eh: %s\n", string);
 	return 0;
 }
