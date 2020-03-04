@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <string.h>
+#define MAX_NUMBERS 99999
 
 int main(){
-	int sequencia[9999], aux=1, maior, cumprimento=0;
+	int sequencia[MAX_NUMBERS], aux=1, maior, cumprimento=0, contador=0;
 
 	printf("Insira uma sequencia de numeros e, quando terminar, insira '0'\n");
 	for(int i=0;aux!=0;i++){
 		scanf("%d", &aux);
 		sequencia[i] = aux;
+		contador++;
 	} 
 	
-	//Calculating the number of elements in the sequence
-	for(int i=0;sequencia[i]!='\0';i++){
-		cumprimento++;
-	}
 
 	maior = sequencia[0];
-	for(int i=0;i<=cumprimento;i++){
+	for(int i=0;i<contador;i++){
 		if( sequencia[i] > maior){
 			maior = sequencia[i];
 		}
